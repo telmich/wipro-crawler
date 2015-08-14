@@ -24,6 +24,29 @@ Examples
 # Analyse links and images on a cached version of ungleich.ch
 ./wipro-crawler.py --no-download ungleich.ch
 
+Example output
+--------------
+
+./wipro-crawler.py -n ungleich.ch                   
+INFO: Crawling domain ungleich.ch
+INFO: Analysing domain: ungleich.ch
+ungleich.ch/index.html
+    Images
+        img/logo_white.svg
+        img/logo_200x200.svg
+        img/team/5.jpg
+        img/team/4.jpg
+        [...]
+    Links
+        #page-top
+        #page-top
+        #services
+        #portfolio
+        #about
+        #team
+        http://blog.ungleich.ch
+        #contact
+        [...]
 
 
 Bugs / Notes
