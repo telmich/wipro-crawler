@@ -1,0 +1,21 @@
+Principle
+---------
+
+Retrieve a (whole) website, analyse the output.
+Using "wget" for website retrieval, as it resembles the requirements very well.
+
+Environment
+-----------
+The script was tested on Arch Linux using python 3.4.3 and wget 1.16.3.
+
+
+Bugs / Notes
+------------
+- No parsing of CSS and Javascript involved: Many references may be missing
+- The whole website is cached locally and processed afterwards -> should be optimised for large sites
+- Using -e robots=off for wget turns off robots.txt support and retrieves the whole website, 
+  even if robots.txt is trying to disable it
+- Using --delete-after with wget could be used for automatic cleanup, but requires instant analysis of
+  every file
+- Limited the files to be retrieved using extension .php, .html, .asp: The motivation is 
+  to not download images, however it may exclude more content than required.
