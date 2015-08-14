@@ -9,6 +9,7 @@ Environment
 -----------
 The script was tested on Arch Linux using python 3.4.3 and wget 1.16.3.
 
+
 Parameters
 ----------
 Use "./wipro-crawler.py -h" to get current list of supported parameters
