@@ -4,9 +4,25 @@ Principle
 Retrieve a (whole) website, analyse the output.
 Using "wget" for website retrieval, as it resembles the requirements very well.
 
+
 Environment
 -----------
 The script was tested on Arch Linux using python 3.4.3 and wget 1.16.3.
+
+Parameters
+----------
+Use "./wipro-crawler.py -h" to get current list of supported parameters
+
+
+Examples
+--------
+
+# Analyse links and images on ungleich.ch
+./wipro-crawler.py ungleich.ch
+
+# Analyse links and images on a cached version of ungleich.ch
+./wipro-crawler.py --no-download ungleich.ch
+
 
 
 Bugs / Notes
@@ -19,3 +35,13 @@ Bugs / Notes
   every file
 - Limited the files to be retrieved using extension .php, .html, .asp: The motivation is 
   to not download images, however it may exclude more content than required.
+- Used logging module so logging can be changed for production use instead of print()
+- Log level can be adjusted for production use using log.setLevel(LEVEL)
+  See https://docs.python.org/3.4/library/logging.html
+- For real production use the code should be abstracted into a class that can be easily reused
+- Log level of wget is not adjusted to log levell of python script -> needs to be synchronised
+- No http/https support - even though wget is capable of it, it was excluded because handling of
+  insecure ssl certificates needs to be added and parsing of url (which is at the moment just the
+  domain name)
+- The output format can easily be changed to be JSON, XML, etc. - the format was chosen for easy use
+  on the command line

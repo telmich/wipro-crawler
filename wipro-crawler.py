@@ -89,6 +89,5 @@ for domain in args.domain:
         links_formatted = "\n\t\t".join(links)
         images_formatted = "\n\t\t".join(images)
 
-        # page_info = "{name}\n\tImages:\n\t\t{images}\n\tLinks\n\t\t".format(name=page
-        page_info = "{name}\n\tImages:\n\t\t{images}\n\tLinks\n\t\t{links}".format(name=page, images=images_formatted, links=links_formatted)
+        page_info = "{name}\n\tImages\n\t\t{images}\n\tLinks\n\t\t{links}".format(name=page, images=images_formatted, links=links_formatted)
         print("%s" % page_info)
